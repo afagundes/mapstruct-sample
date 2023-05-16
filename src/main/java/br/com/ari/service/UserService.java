@@ -41,12 +41,12 @@ public class UserService {
 
     public UserDTO getBasicUserUsingMapstruct() {
         User user = findUser();
-        return UserMapper.INSTANCE.userToBasicUser(user);
+        return UserMapper.INSTANCE.userToUserDTO(user);
     }
 
     public UserWithAddressDTO getUserWithAddressUsingMapstruct() {
         User user = findUser();
-        return UserMapper.INSTANCE.userToUserWithAddress(user);
+        return UserMapper.INSTANCE.userToUserWithAddressDTO(user);
     }
 
 }

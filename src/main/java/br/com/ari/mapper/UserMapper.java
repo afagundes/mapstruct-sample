@@ -13,9 +13,9 @@ public interface UserMapper {
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
     @Mapping(target = "site", source = "website")
-    UserDTO userToBasicUser(User user);
+    UserDTO userToUserDTO(User user);
 
     @Mapping(target = "address.number", source = "address.suite")
-    UserWithAddressDTO userToUserWithAddress(User user);
+    UserWithAddressDTO userToUserWithAddressDTO(User user);
 
 }
